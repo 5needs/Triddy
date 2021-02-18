@@ -24,9 +24,9 @@ Triddy brinda la posibilidad de realizar ciertas funcionalidades de nuestros cli
    
      Cuando va a alquilar, va a poder pagar ese alquiler de forma segura y confiable con ePayco, junto con las políticas de rembolso de Triddy como un plan premium, donde si no recibe lo que alquilo se devuelve el dinero o si el prodcuto no es devuelto. Hay que tener en cuenta las fechas de alquiler del producto, si no devuelve el producto en la fecha final de alquiler, se le cobrara un monto de retraso el cual se le notificara al momento de loguearse, donde aumentara día tras día mientras que no lo devuelva al propietario del producto. 
      
- ### &#x1F4D7;Mokeups
+ ### &#x1F4D7;Mockups
  
- * [Mokeups](https://framer.com/projects/Get-Started--kId3CAfQDDsAtQYZ9H8k-hz80v)
+ * [Mockups](https://framer.com/projects/Get-Started--kId3CAfQDDsAtQYZ9H8k-hz80v)
  
  ![](https://github.com/5needs/Triddy/blob/main/img/readme/muckup.png)
  
