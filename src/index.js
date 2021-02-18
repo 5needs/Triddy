@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Conversation from './components/conversation/Conversation';
+import ConversationList from './components/conversationList/ConversationList';
+import App from './components/App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
