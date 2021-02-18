@@ -1,4 +1,4 @@
-# &#x1F34F;Proyecto-ARSW-Triddy-2020-2&#x1F34F;
+# &#x1F34F;Proyecto-IETI-Triddy-2021-1&#x1F34F;
 
 ## ![](https://github.com/GEARSHORDA3/Proyecto-ARSW-Triddy-2020-2/blob/master/imagenes/logo.png)
 
