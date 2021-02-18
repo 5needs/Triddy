@@ -30,7 +30,13 @@ Triddy brinda la posibilidad de realizar ciertas funcionalidades de nuestros cli
  
  ![](https://github.com/5needs/Triddy/blob/main/img/readme/muckup.png)
  
- 
+ ## Descripción sprint 1
+
+Burndown chart and backlog
+
++ Burndown chart: https://tree.taiga.io/project/gearshorda3-gestion-de-recursos-triddy/taskboard/sprin1-24
+
+En este sprint se va a completar casi todos los objetivos por realizar. Cada integrante del equipo cumplirá con sus deberes en el tiempo adecuado y con una calidad óptima. La página de incio de sesión sirve correctamente y se puede realizar visualizar ciertas ventanas de la aplicación. 
      
  ## Integrantes
 
