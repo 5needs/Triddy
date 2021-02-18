@@ -28,9 +28,10 @@ Triddy brinda la posibilidad de realizar ciertas funcionalidades de nuestros cli
      
  ## Integrantes
 
- - JULIAN DAVID GUTIERREZ VANEGAS
- - ANDRES RICARDO MARTINEZ DIAZ
- - EDWIN YESID RODRIGUEZ MALDONADO
- - MARIN MENDEZ ALAN YESID
- - VARGAS LEON DAVID ANDRES
- 
+
+* [JULIAN DAVID GUTIERREZ VANEGAS](https://github.com/JulianGutierritos)
+* [ANDRES RICARDO MARTINEZ DIAZ](https://github.com/Ricar8o)
+* [EDWIN YESID RODRIGUEZ MALDONADO](https://github.com/Edyesid)
+* [MARIN MENDEZ ALAN YESID](https://github.com/orgs/5needs/people/Elan-MarMEn)
+* [VARGAS LEON DAVID ANDRES](https://github.com/GEARSHORDA3)
+
