@@ -8,7 +8,7 @@ class Conversation extends React.Component {
 	render(){
 		return (
 		  <div className="scrollable content">
-			<MessageList author={conversations[0].author} messages={conversations[0].messages} />
+			<MessageList author={this.props.location.state.author} messages={this.props.location.state.messages} />
 		  </div>
 		);
 	}
