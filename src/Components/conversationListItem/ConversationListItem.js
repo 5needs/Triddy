@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
 import './ConversationListItem.css';
 import { history } from './../App'
 import shave from 'shave'

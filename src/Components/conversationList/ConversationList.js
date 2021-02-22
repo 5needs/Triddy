@@ -2,7 +2,6 @@ import React from 'react';
 import ConversationSearch from './../conversationSearch/ConversationSearch';
 import ConversationListItem from './../conversationListItem/ConversationListItem';
 import Toolbar from './../toolBar/ToolBar';
-import ToolbarButton from './../toolBarButton/ToolBarButton';
 import conversations from './../data/data';
 import './ConversationList.css';
 

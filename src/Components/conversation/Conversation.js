@@ -1,7 +1,6 @@
 import React from "react";
 import './Conversation.css';
 import MessageList from './../messageList/MessageList';
-import conversations from './../data/data';
 
 
 class Conversation extends React.Component {
