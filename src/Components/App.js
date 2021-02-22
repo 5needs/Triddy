@@ -1,7 +1,6 @@
 import React from 'react';
 import Conversation from './conversation/Conversation';
-import {BrowserRouter as Link, Route, Switch} from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter as Link, Route, Switch, BrowserRouter} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 export const history = createBrowserHistory({forceRefresh:true});
