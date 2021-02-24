@@ -155,7 +155,13 @@ body {
     border-image: linear-gradient(45deg, #1a8fff 0%, #53cbf1 40%);
     border-image-slice: 1;
 }
-  
+
+.calendar .body .reserved {
+    border-left: 10px solid transparent;
+    border-image: linear-gradient(45deg, #ff6e1a 0%, #f1bc59 40%);
+    border-image-slice: 1;
+}
+
 .calendar .body .row {
     border-bottom: 1px solid var(--border-color);
 }
@@ -200,6 +206,14 @@ body {
   opacity: 0.05;
   transition: 0.5s ease-in;
 }
+
+.calendar .body .reserved .bg {
+    opacity: 0.1;
+    transition: 0.5s ease-in;
+    color: red;
+}
+
+
 
 .calendar .body .col {
     flex-grow: 0;

@@ -61,7 +61,8 @@ export class Calendar extends React.Component{
                 className={`col cell ${
                 !isSameMonth(day, monthStart)
                     ? "disabled"
-                    : this.isReserved(day) ? "selected" 
+                    : this.isReserved(day) ? "reserved"
+                    : isSameDay(day, new Date()) ? "selected" 
                     : ""
                 }`}
                 key={day}
