@@ -183,7 +183,7 @@ body {
 }
 
 .calendar .body .cell .bg {
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     color: var(--main-color);
     opacity: 0;

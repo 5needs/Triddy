@@ -8,7 +8,7 @@ export class Calendar extends React.Component{
         super(props);
         this.state = {
             currentMonth: new Date(),
-            Dates: []
+            Dates: this.props.dates
         };
     }
 
@@ -61,7 +61,7 @@ export class Calendar extends React.Component{
                 className={`col cell ${
                 !isSameMonth(day, monthStart)
                     ? "disabled"
-                    // : isSameDay(day, selectedDate) ? "selected" 
+                    : this.isReserved(day) ? "selected" 
                     : ""
                 }`}
                 key={day}
@@ -98,12 +98,21 @@ export class Calendar extends React.Component{
         });
     };
 
+    isReserved = day => {
+      for (var i = 0; i < this.props.dates.length; i++) {
+        if (isSameDay(day,this.props.dates[i])) {
+          return true;
+        }
+      }
+      return false;
+    }
+
     render() {
         return (
             <div className="container">
                 <div className="calendar">
                     {/* {console.log(this.props.dates)} */}
-                    {console.log(this.state.currentMonth)}
+                    {/* {console.log(this.state.currentMonth)} */}
                     {this.renderHeader()}
                     {this.renderDays()}
                     {this.renderCells()}
