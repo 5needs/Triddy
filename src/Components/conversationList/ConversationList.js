@@ -14,10 +14,8 @@ class ConversationList extends React.Component {
 	render(){
     return (
       <div className="conversation-list">
-        <Toolbar
-          title="Preguntas"
-        />
-        <ConversationSearch />
+        <Toolbar title="Preguntas"/>
+         <ConversationSearch />
         {
           this.state.conversations.map(conversation =>
             <ConversationListItem

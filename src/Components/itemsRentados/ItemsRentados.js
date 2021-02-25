@@ -55,9 +55,6 @@ class ItemsRentados extends React.Component {
         return (
             <div style={{display:'flex', flexDirection:'column'}}>
                 <Toolbar title="Mis rentas"/>
-                <br/>
-                <br/>
-                <br/>
                 <div className="form">
                     <label htmlFor="status" className="right-margin">
                             Mostrar Items:
