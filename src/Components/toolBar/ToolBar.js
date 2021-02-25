@@ -18,7 +18,6 @@ class ToolBar extends React.Component {
 			);
 		}
 		else{
-			console.log(this.props.src);
 			return (
 			  <div className="toolbar">
 				<div className="left-items">

@@ -13,7 +13,7 @@
 @supports (backdrop-filter: blur(20px)) {
   .toolbar {
     border: none;
-    background-color: rgba(242, 241, 239, 1);
+    background-color: #ff8c00;
     backdrop-filter: blur(20px);
   }
 }
@@ -21,6 +21,7 @@
 .toolbar-title {
   font-size: 16px;
   font-weight: 800;
+  color: white;
 }
 
 .toolbar-photo {

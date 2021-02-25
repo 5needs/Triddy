@@ -1,4 +1,4 @@
-
+import moment from "moment"
 const conv1 = {id: 1 , author : {id: 2, name: 'pruebastina', src: 'https://cdn.pixabay.com/photo/2015/09/02/13/24/girl-919048_960_720.jpg'}, messages:  [
         {
           id: 1,
@@ -103,3 +103,11 @@ const conv2 = {id: 2 , author : {id: 3, name: 'pruebastian', src: 'https://cdn.p
 const conversations = [conv1, conv2];
 
 export default conversations;
+
+
+const item1 = {nombre : 'libro pendiente', descripcion: 'libro de calculo integral con formulas al final', devuelto: false, 
+              src: 'https://images.freeimages.com/images/large-previews/c56/book-1424031.jpg', fechaEntrega : new moment("2021-02-28")}
+const item2 = {nombre : 'libro devuelto', descripcion: 'libro de calculo integral con formulas al final', devuelto: true, 
+              src: 'https://images.freeimages.com/images/large-previews/c56/book-1424031.jpg', fechaEntrega : new moment("2021-02-24")}
+export const misItems = [item1, item2];
+
