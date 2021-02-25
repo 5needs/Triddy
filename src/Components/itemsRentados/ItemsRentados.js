@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemRentado from './../itemRentado/ItemRentado'
-import Toolbar from './../toolBar/ToolBar'
+import ItemRentado from './../itemRentado/ItemRentado';
+import Toolbar from './../toolBar/ToolBar';
 import Box from '@material-ui/core/Box';
 import { misItems } from './../data/data';
 import Select from '@material-ui/core/Select';
