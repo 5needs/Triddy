@@ -26,9 +26,7 @@ Triddy brinda la posibilidad de realizar ciertas funcionalidades de nuestros cli
      
  ### &#x1F4D7;Mockups
  
- * [Mockups](https://framer.com/projects/Get-Started--kId3CAfQDDsAtQYZ9H8k-hz80v)
- 
- ![](https://github.com/5needs/Triddy/blob/main/img/readme/muckup.png)
+ * [Mockups](https://mockingbot.com/app/uxo76g4r83klgwtw9viqs2wtujyy#screen=sklgwtx9duv890p1f)
  
  ## Descripción sprint 1
 
