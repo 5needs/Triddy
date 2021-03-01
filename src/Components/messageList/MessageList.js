@@ -66,7 +66,7 @@ class MessageList extends React.Component {
 			let next = this.state.messages[i + 1];
 			let isMine = current.author === MY_USER_ID;
 			let currentMoment = moment(current.timestamp);
-			let newMessage = this.createMessage(previous, current, next, isMine, currentMoment);
+			let newMessage = this.createMessage(previous, current, next, isMine, currentMoment, i);
 			tempMessages.push(newMessage);
 			i += 1;
 		}
