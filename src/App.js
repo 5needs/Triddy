@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Rutas from './Components/App';
+import Conversation from './Components/conversation/Conversation';
+import ConversationList from './Components/conversationList/ConversationList';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           Learn React
         </a>
       </header>
+	  <Rutas />
+	  <ConversationList />
+	  <Conversation />
     </div>
   );
 }
