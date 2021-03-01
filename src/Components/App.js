@@ -8,7 +8,7 @@ import { createBrowserHistory } from 'history';
 
 export const history = createBrowserHistory({forceRefresh:true});
 
-export default class App extends React.Component {
+export default class Rutas extends React.Component {
 	render(){
 		return(
 			<BrowserRouter history={history}>
