@@ -1,9 +1,20 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import { Avatar, Button, Checkbox, CssBaseline, FormControlLabel, Grid, Link, TextField, Typography } from '@material-ui/core';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { Button, Checkbox, CssBaseline, FormControlLabel, Grid, Link, TextField, ThemeProvider, Typography } from '@material-ui/core';
 import './Login.css';
+import { createMuiTheme } from '@material-ui/core/styles';
 
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#e7710a",
+    },
+    secondary: {
+      main: "#ca1e1e",
+    },
+  },
+});
 localStorage.setItem('username', 'test@somemail.com');
 localStorage.setItem('password', '1234567');
 
@@ -18,22 +29,16 @@ export class Login extends React.Component{
         let password = document.getElementById("password").value;
         if (username == localStorage.getItem('username') && password == localStorage.getItem('password')) {
             localStorage.setItem('isLoggedIn', true);
-            alert("Login Successful");
-            
-        }else 
-            alert("Not");
-    
+        }    
     }
 
     render(){
         return (
-            <Container className="container" component="main" maxWidth="xs">
+            <ThemeProvider theme={theme}>
+                <Container className="container" component="main" maxWidth="xs">
                 <CssBaseline/>
                 <div className="paper" >
-                    <Avatar className="avatar">
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h5">
+                    <Typography component="h1" variant="h4" >
                         Sign in
                     </Typography>
                     <form className="form" noValidate onSubmit={this.handleSubmitChange}>
@@ -87,6 +92,7 @@ export class Login extends React.Component{
                     </form>
                 </div>
             </Container>
+            </ThemeProvider>
         );
     }
 }
