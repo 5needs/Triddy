@@ -1,6 +1,6 @@
 import React from 'react';
-import ItemRentado from './../itemRentado/ItemRentado'
-import Toolbar from './../toolBar/ToolBar'
+import ItemRentado from './../itemRentado/ItemRentado';
+import Toolbar from './../toolBar/ToolBar';
 import Box from '@material-ui/core/Box';
 import { misItems } from './../data/data';
 import Select from '@material-ui/core/Select';
@@ -55,9 +55,6 @@ class ItemsRentados extends React.Component {
         return (
             <div style={{display:'flex', flexDirection:'column'}}>
                 <Toolbar title="Mis rentas"/>
-                <br/>
-                <br/>
-                <br/>
                 <div className="form">
                     <label htmlFor="status" className="right-margin">
                             Mostrar Items:

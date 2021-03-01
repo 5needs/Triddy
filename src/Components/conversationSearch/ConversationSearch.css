@@ -2,6 +2,7 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  margin-top: 3%;
 }
 
 .conversation-search-input {

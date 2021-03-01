@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
 }
-.form{
-    margin-left: 40%;
-    margin-top: 0%;
-    width: 20%;
+.form {
+    border: 1px solid lightsteelblue;
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 50%;
     padding: 20px;
     text-align: center;
 }
