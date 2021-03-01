@@ -23,7 +23,7 @@ function App() {
         <CardProduct/>
       </div>
     </div>
-    
+  )
 }
 
 export default App;
