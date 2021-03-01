@@ -94,8 +94,8 @@ export class Calendar extends React.Component{
     };
 
     isReserved = day => {
-      for (var i = 0; i < this.props.dates.length; i++) {
-        if (isSameDay(day,this.props.dates[i])) {
+      for (let value of this.props.dates) {
+        if (isSameDay(day,value)) {
           return true;
         }
       }
