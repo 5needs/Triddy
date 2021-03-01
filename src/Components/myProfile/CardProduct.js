@@ -6,6 +6,10 @@ import Button from '@material-ui/core/Button';
 
 class CardProduct extends React.Component {
 
+    constructor(props){
+        super(props);
+    }
+    
     render(){
         return (
             // <div className="card mx-auto Fitness-Card"
@@ -31,7 +35,7 @@ class CardProduct extends React.Component {
             //     </div>
             // </div>
             <div>
-                
+
             </div>
         )
     }
