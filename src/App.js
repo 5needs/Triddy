@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Conversation from './conversation/Conversation';
+import ConversationList from './conversationList/ConversationList';
+import ItemsRentados from './itemsRentados/ItemsRentados';
+import FormularioCalificacion from './formularioCalificacion/FormularioCalificacion';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
           Learn React
         </a>
       </header>
+	  <ConversationList />
+	  <Conversation />
+	  <ItemsRentados />
+	  <FormularioCalificacion /> 
     </div>
   );
 }
