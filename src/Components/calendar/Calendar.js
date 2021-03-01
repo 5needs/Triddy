@@ -103,8 +103,9 @@ export class Calendar extends React.Component{
     }
 
     getTypeCol(day, monthStart){
-      if (!isSameMonth(day, monthStart)){ return "disabled"}
-      return this.isReserved(day) ? "reserved" : isSameDay(day, new Date()) ? "selected" : "" ;
+      if (!isSameMonth(day, monthStart)) return "disabled";
+      if (this.isReserved(day)) return "reserved" ;
+      return  isSameDay(day, new Date()) ? "selected" : "" ;
     }
 
     render() {
