@@ -42,7 +42,6 @@ export class Notification extends React.Component{
 
     formatDate(date){
         const dateFormat = "dd/MM/yyyy";
-        var some =  format(date,dateFormat) ;
-        return some;
+        return format(date,dateFormat);
     }
 }
