@@ -1,7 +1,7 @@
 import React from 'react'
-import circlesImg from './images/circles.png'
+// import circlesImg from './images/circles.png'
 import './styles/CardProduct.css'
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 
 
 class CardProduct extends React.Component {
