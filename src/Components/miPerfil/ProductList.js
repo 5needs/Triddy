@@ -9,8 +9,9 @@ class ProductList extends Component {
   render() {
     return(
         <div>
-            { this.props.products.map((product) => {
+            { this.props.products.map((product,i) => {
                 return(
+                  <div key={i}>
                     <Card
                         title={product.title}
                         price={product.price}
@@ -18,6 +19,7 @@ class ProductList extends Component {
                         leftColor={product.leftColor}
                         rightColor={product.rightColor}
                     />
+                  </div>
                 )
             })}
         </div>
