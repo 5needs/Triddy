@@ -58,13 +58,7 @@ export class Calendar extends React.Component{
             const cloneDay = day;
             days.push(
             <div
-                className={`col cell ${
-                !isSameMonth(day, monthStart)
-                    ? "disabled"
-                    : this.isReserved(day) ? "reserved"
-                    : isSameDay(day, new Date()) ? "selected" 
-                    : ""
-                }`}
+                className={`col cell ${this.getTypeCol(day,monthStart)}`}
                 key={day}
                 onClick={() => this.onDateClick(cloneDay)}
             >
@@ -106,6 +100,11 @@ export class Calendar extends React.Component{
         }
       }
       return false;
+    }
+
+    getTypeCol(day, monthStart){
+      if (!isSameMonth(day, monthStart)){ return "disabled"}
+      return this.isReserved(day) ? "reserved" : isSameDay(day, new Date()) ? "selected" : "" ;
     }
 
     render() {
