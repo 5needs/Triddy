@@ -21,15 +21,6 @@ localStorage.setItem('password', '1234567');
 export class Login extends React.Component{
     constructor(props){
         super(props);
-        this.handleSubmitChange = this.handleSubmitChange.bind(this);
-    }
-
-    handleSubmitChange(e) {
-        let username = document.getElementById("email").value;
-        let password = document.getElementById("password").value;
-        if (username == localStorage.getItem('username') && password == localStorage.getItem('password')) {
-            localStorage.setItem('isLoggedIn', true);
-        }    
     }
 
     render(){
@@ -41,7 +32,7 @@ export class Login extends React.Component{
                     <Typography component="h1" variant="h4" >
                         Sign in
                     </Typography>
-                    <form className="form" noValidate onSubmit={this.handleSubmitChange}>
+                    <form className="form" noValidate >
                         <TextField
                             variant="outlined"
                             margin="normal"
