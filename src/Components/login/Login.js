@@ -4,9 +4,25 @@ import { Avatar, Button, Checkbox, CssBaseline, FormControlLabel, Grid, Link, Te
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import './Login.css';
 
+localStorage.setItem('username', 'test@somemail.com');
+localStorage.setItem('password', '1234567');
+
 export class Login extends React.Component{
     constructor(props){
         super(props);
+        this.handleSubmitChange = this.handleSubmitChange.bind(this);
+    }
+
+    handleSubmitChange(e) {
+        let username = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        if (username == localStorage.getItem('username') && password == localStorage.getItem('password')) {
+            localStorage.setItem('isLoggedIn', true);
+            alert("Login Successful");
+            
+        }else 
+            alert("Not");
+    
     }
 
     render(){
@@ -20,7 +36,7 @@ export class Login extends React.Component{
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
-                    <form className="form" noValidate>
+                    <form className="form" noValidate onSubmit={this.handleSubmitChange}>
                         <TextField
                             variant="outlined"
                             margin="normal"
