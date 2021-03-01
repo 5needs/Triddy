@@ -6,6 +6,7 @@ import MyPosts from './Components/miPerfil/pages/MyPosts';
 function App() {
   return (
     <div className="App">
+      
       <div>
         <MyPosts />
       </div>
