@@ -63,40 +63,40 @@ const conv1 = {id: 1 , author : {id: 2, name: 'pruebastina', src: 'https://cdn.p
 		
 const conv2 = {id: 2 , author : {id: 3, name: 'pruebastian', src: 'https://cdn.pixabay.com/photo/2015/01/08/18/30/entrepreneur-593371_960_720.jpg'}, messages:  [
         {
-          id: 1,
+          id: 11,
           author: 1,
           message: 'Hola, me gustaria rentar una bata',
-          timestamp: new Date("2019/10/06").getTime()
+          timestamp: new Date("2021/02/06").getTime()
         },
         {
-          id: 2,
-          author: 2,
+          id: 12,
+          author: 3,
           message: 'Perfecto, ¿para qué día?',
-          timestamp: new Date().getTime()
+          timestamp: new Date("2021/02/10").getTime()
         },
         {
-          id: 3,
-          author: 2,
+          id: 13,
+          author: 3,
           message: 'En el producto está la disponibilidad',
-          timestamp: new Date().getTime()
+          timestamp: new Date("2021/02/10").getTime()
         },
         {
-          id: 4,
+          id: 14,
           author: 1,
           message: 'La veré',
-          timestamp: new Date().getTime()
+          timestamp: new Date("2021/02/11").getTime()
         },
         {
-          id: 5,
+          id: 15,
           author: 1,
           message: 'para el jueves está bien',
-          timestamp: new Date().getTime()
+          timestamp: new Date("2021/02/11").getTime()
         },
         {
-          id: 6,
+          id: 16,
           author: 1,
           message: 'Gracias',
-          timestamp: new Date().getTime()
+          timestamp: new Date("2021/02/11").getTime()
         }]};
 		
 		
