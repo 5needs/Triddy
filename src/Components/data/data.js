@@ -65,37 +65,37 @@ const conv2 = {id: 2 , author : {id: 3, name: 'pruebastian', src: 'https://cdn.p
         {
           id: 1,
           author: 1,
-          message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+          message: 'Hola, me gustaria rentar una bata',
           timestamp: new Date("2019/10/06").getTime()
         },
         {
           id: 2,
           author: 2,
-          message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
+          message: 'Perfecto, ¿para qué día?',
           timestamp: new Date().getTime()
         },
         {
           id: 3,
           author: 2,
-          message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+          message: 'En el producto está la disponibilidad',
           timestamp: new Date().getTime()
         },
         {
           id: 4,
           author: 1,
-          message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
+          message: 'La veré',
           timestamp: new Date().getTime()
         },
         {
           id: 5,
           author: 1,
-          message: 'Hello world! This is a long message that will hopefully get wrapped by our message bubble component! We will see how well it works.',
+          message: 'para el jueves está bien',
           timestamp: new Date().getTime()
         },
         {
           id: 6,
           author: 1,
-          message: 'It looks like it wraps exactly as it is supposed to. Lets see what a reply looks like!',
+          message: 'Gracias',
           timestamp: new Date().getTime()
         }]};
 		
