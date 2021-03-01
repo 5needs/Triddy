@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react';
 import Card from './CardProduct'
 
+class ProductList extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-function ProductList(props){
+  render() {
     return(
         <div>
-            { props.products.map((product) => {
+            { this.props.products.map((product) => {
                 return(
                     <Card
                         title={product.title}
@@ -17,7 +21,8 @@ function ProductList(props){
                 )
             })}
         </div>
-    )
+    );
+  }
 }
 
 export default ProductList

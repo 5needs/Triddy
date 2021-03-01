@@ -8,9 +8,6 @@ class CardProduct extends React.Component {
 
     render(){
         const { title, price, img,leftColor,rightColor} = this.props
-        {console.log(title)}
-        {console.log(price)}
-        {console.log(img)}
         return (
             <div className="card mx-auto Fitness-Card"
                  style={{
