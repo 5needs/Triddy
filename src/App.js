@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import CardProduct from './Components/myProfile/CardProduct';
 
 function App() {
   return (
@@ -18,8 +19,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <CardProduct/>
+      </div>
     </div>
-  );
+    
 }
 
 export default App;
