@@ -1,6 +1,6 @@
 import React from 'react';
 import './Calendar.css';
-import {format, subMonths, addMonths, startOfWeek, addDays, startOfMonth, endOfMonth, endOfWeek, isSameMonth, isSameDay, parse} from 'date-fns';
+import {format, subMonths, addMonths, startOfWeek, addDays, startOfMonth, endOfMonth, endOfWeek, isSameMonth, isSameDay} from 'date-fns';
 
 export class Calendar extends React.Component{
 
@@ -112,8 +112,6 @@ export class Calendar extends React.Component{
         return (
             <div className="container">
                 <div className="calendar">
-                    {/* {console.log(this.props.dates)} */}
-                    {/* {console.log(this.state.currentMonth)} */}
                     {this.renderHeader()}
                     {this.renderDays()}
                     {this.renderCells()}
