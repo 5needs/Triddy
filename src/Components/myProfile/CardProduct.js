@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button';
 class CardProduct extends React.Component {
 
     render(){
-        const { title, price, img,leftColor,rightColor} = this.props
         return (
             <div className="card mx-auto Fitness-Card"
                  style={{
