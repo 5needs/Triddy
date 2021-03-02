@@ -21,10 +21,10 @@ class CardProduct extends React.Component {
                             <h1>{title}</h1>
                             <p>Price ${price}</p>
                             <Button variant="contained" color="primary">
-                                Editar
+                                Edit
                             </Button>
                             <Button variant="contained" color="secondary">
-                                Eliminar
+                                Delete
                             </Button>
                         </div>
 
