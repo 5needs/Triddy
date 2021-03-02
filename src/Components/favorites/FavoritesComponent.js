@@ -12,7 +12,7 @@ export class FavoritesComponent extends React.Component{
             img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
         }
         let item2 = {
-            description: "Libro de fisica 1 Libro de fisica 1 Libro de fisica 1",
+            description: "Libro de fisica 1",
             price: 9000,
             img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
         }
