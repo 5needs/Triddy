@@ -5,9 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import NumberFormat from 'react-number-format';
 
 export class ProductRegister extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     function NumberFormatCustom(props) {
       const { inputRef, onChange, ...other } = props;
