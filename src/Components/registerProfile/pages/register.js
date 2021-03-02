@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Registration from '../registration';
+import Registration from '../Registration';
 
-class register extends Component {
+class Register extends Component {
  
   render() {
     return (
@@ -10,4 +10,4 @@ class register extends Component {
   }
 }
 
-export default register;
+export default Register;
