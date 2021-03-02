@@ -7,7 +7,7 @@ export class FavoritesComponent extends React.Component{
     constructor(props){
         super(props);
         let item1 = {
-            description: "Un bata de laboratorio",
+            description: "Una bata de laboratorio",
             price: 1000,
             img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
         }

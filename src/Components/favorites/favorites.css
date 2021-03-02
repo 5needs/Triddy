@@ -15,7 +15,7 @@
 }
 
 .favoritesContainer{
-    margin: 3%;
+    margin: 4%;
 }
 
 img {
@@ -28,4 +28,8 @@ img {
 
 .favoriteItem{
     padding-bottom: 5%;
+}
+
+.favoriteItemContainer{
+    padding-right: 5%;
 }
