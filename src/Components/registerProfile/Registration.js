@@ -28,6 +28,7 @@ class Registration extends Component {
                     <input type="text" name="name" required="" placeholder="Name"/>
                     <input type="text" name="lastName" required="" placeholder="Last Name"/>
                     <br/>
+                    <br/>
                     <input type="email" name="email" required="" placeholder="Email"/>
                     <br/>
                     <input type="text" name="user" required="" placeholder="User name"/>
