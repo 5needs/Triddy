@@ -1,6 +1,6 @@
 import './App.css';
-import MyPosts from './Components/miPerfil/pages/MyPosts';
-import MyData from './Components/miPerfil/pages/MyData';
+import MyPosts from './Components/viewOtherProfile/pages/MyPosts';
+import MyData from './Components/viewOtherProfile/pages/MyData';
 
 function App() {
   return (
