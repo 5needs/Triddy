@@ -1,6 +1,17 @@
 import React from 'react';
 import './favorites.css';
-import { Button, Grid, Paper, Typography } from '@material-ui/core'
+import { Button, createMuiTheme, Grid, Paper, ThemeProvider, Typography } from '@material-ui/core'
+
+const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: "#e7710a",
+      },
+      secondary: {
+        main: "#ca1e1e",
+      },
+    },
+  });
 
 export class FavoriteItem extends React.Component{
     constructor(props){
@@ -32,9 +43,11 @@ export class FavoriteItem extends React.Component{
                                     
                                 </Grid>
                                 <Grid item >
-                                    <Button variant="contained" >
-                                        Añadir 
-                                    </Button>
+                                    <ThemeProvider theme={theme}>
+                                        <Button variant="contained" color="primary">
+                                            Añadir 
+                                        </Button>
+                                    </ThemeProvider>
                                 </Grid>
                                 
                             </Grid>

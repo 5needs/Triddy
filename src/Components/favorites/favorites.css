@@ -11,7 +11,7 @@
     justify-content: space-between;
     margin: 0;
     padding: 1rem;
-    /* color:#332707; */
+    /* color:#bb5a00; */
 }
 
 .favoritesContainer{
@@ -28,8 +28,10 @@ img {
 
 .favoriteItem{
     padding-bottom: 5%;
+    
 }
 
 .favoriteItemContainer{
     padding-right: 5%;
+    background-color:#fdfaf2;
 }
