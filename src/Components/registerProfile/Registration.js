@@ -7,25 +7,6 @@ class Registration extends Component {
   constructor(props) {
     super(props);
     this.state = {name: '', lastName: '', email: '', user: '', password: '', rePasword: ''};
-    this.handleSubmitSingUp = this.handleSubmitSingUp.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleSubmitSingUp(){
-    console.log(this.state);
-    if((this.state.password !== this.state.rePasword) && (this.state.password !=='' && this.state.rePasword!=='')){
-        alert("Password and Repassword must be the same")
-    }else if(this.state.password ==='' || this.state.name ===''|| this.state.rePasword ===''|| this.state.lastName ===''|| this.state.email ===''|| this.state.user ===''){
-      alert("All inputs are required")
-    }else{
-        alert("Registration successful account")
-    }
-  }
-
-  handleChange(event){
-    const key = event.target.name;
-    const value = event.target.value;
-    this.setState({[key]: value});
   }
 
   render() {
@@ -44,20 +25,20 @@ class Registration extends Component {
             <div className="grid-item-sub2">
                 <div className="information-user">
                   <form>
-                    <input type="text" name="name" required="" placeholder="Name" onChange={this.handleChange}/>
-                    <input type="text" name="lastName" required="" placeholder="Last Name" onChange={this.handleChange}/>
+                    <input type="text" name="name" required="" placeholder="Name"/>
+                    <input type="text" name="lastName" required="" placeholder="Last Name"/>
                     <br/>
-                    <input type="email" name="email" required="" placeholder="Email" onChange={this.handleChange}/>
+                    <input type="email" name="email" required="" placeholder="Email"/>
                     <br/>
-                    <input type="text" name="user" required="" placeholder="User name" onChange={this.handleChange}/>
+                    <input type="text" name="user" required="" placeholder="User name"/>
                     <br/>
                     <label>
-                    <input type="text" name="password" required="" placeholder="Password" onChange={this.handleChange}/>
+                    <input type="text" name="password" required="" placeholder="Password"/>
                     </label>
                     <br/>
-                    <input type="text" name="rePasword" required="" placeholder="Re-password" onChange={this.handleChange}/>
+                    <input type="text" name="rePasword" required="" placeholder="Re-password"/>
                     <br/>
-                    <Button variant="contained" color="primary" onClick={this.handleSubmitSingUp}>
+                    <Button variant="contained" color="primary">
                         Sign up
                     </Button>
                   </form>
