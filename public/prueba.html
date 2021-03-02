@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {color:red;}
+        p {color:blue;}
+        body{
+            background-color: azure;
+        }
+        .contenedor_usuario{
+            display: grid;
+            grid-template-rows: 40px 300px;
+        }
+        .contenedor_usuario-sub1{
+            display: grid;
+            grid-template-rows: 80% 20%;
+        }
+        .grid-item-header{
+            
+        }
+        .grid-item-sub2{
+            border: 2px solid #000 ;
+            background-color: dimgray;
+        }
+        .grid-item-sub3{
+            border: 2px solid #000 ;
+            background-color: dimgray;
+        }
+        .photo-profile{
+            background-color: red;
+            display: inline-bock;
+            padding: 60px;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 90%;
+            height: 5px;
+            width: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 10px;
+            /* me ayuda a darle propiedades para que el objeto se mueva libre de su contenedor */
+            position: relative;
+            overflow: hidden;
+        }
+        .information-user{
+            background-color: blue;
+            display: inline-block;
+            padding: 20px;
+            margin-top: 5%;
+            height: 129px;
+            width: 250px;
+            font-size: 50px;
+            /* Hacer que el texto se esconda y baje el texto debajo*/
+            overflow: hidden;
+            overflow-wrap: break-word;
+        }
+        .buttons-user{
+            background-color: green;
+            display: inline-bock;
+            margin-left: auto;
+            height: 56px;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+</head>
+<body>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph</p>
+<div class="contenedor_usuario">
+    <div class="grid-item-header">
+        <div class="photo-profile">
+           
+        </div>
+    </div>
+    <div class="contenedor_usuario-sub1">
+        <div class="grid-item-sub2">
+            <div class="information-user">
+                text dasjkdbnawjopnd edFDSFDSFSDAFASDFASDF
+            </div>
+        </div>
+        <div class="grid-item-sub3">
+            <div class="buttons-user">
+                <button>
+                    asfasdfasdfasd
+                </button>
+                <button>
+                    fsdfsadfasd
+                </button>
+                <button>
+                    fsdfsadfasd
+                </button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+</body>
+</html>
