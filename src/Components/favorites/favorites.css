@@ -1,0 +1,31 @@
+.favoritesComponent{
+    margin: 2%;
+    min-width: initial;
+    padding-bottom: 3%;
+}
+
+.favoritesComponent .header {
+    align-items: center;
+    background: #f6f6fa;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem;
+    /* color:#332707; */
+}
+
+.favoritesContainer{
+    margin: 3%;
+}
+
+img {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.favoriteItem{
+    padding-bottom: 5%;
+}
