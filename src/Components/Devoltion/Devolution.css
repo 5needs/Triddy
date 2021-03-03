@@ -1,0 +1,66 @@
+.subContainerProducts{
+    display: flex;
+    flex-direction: column;
+}
+
+.productContainer{
+    height: auto;
+    background-color: rgb(240, 240, 240);
+    margin: 0% 20% 0% 10%;    
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+}
+
+.mainImge{
+    /* background-color: antiquewhite; */
+    padding: 5%;
+    overflow: hidden;
+}
+
+.mainImge img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.textcontainer nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.textcontainer li{
+    display: inline-block;
+    margin: 3%;
+}
+
+.textcontainer{
+    font-size: 35px;
+    /* background-color: rgb(220, 245, 221); */
+}
+
+.ContainerButtons{
+    display: grid;
+    grid-template-rows: 90% 10%;
+    /* background-color: aqua; */
+}
+
+.ContainerButtons button{
+    font-size: larger;
+    margin: 0% 0% 0% 10%;
+    padding: 1% 2% 1% 2%;
+    border: none;
+    width: 40%;
+}
+
+.claimsButton{
+    color: white;
+    background-color: rgb(33, 73, 253);
+}
+
+.Devbutton{
+    
+    background-color: orange;
+}
+
+
+
