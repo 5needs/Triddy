@@ -12,22 +12,6 @@ class MenuSlide extends Component {
     this.state = {};
   }
 
-  generateSearch(){
-    if (this.search) {
-      return(
-        <div>
-          <label>Buscar </label>
-          <input type="text" placeholder="Herramientas"/>
-        </div>
-      );
-    }else{
-      return(
-        <div>
-        </div>
-      );
-    }
-  }
-
   render() {
     return (
         <div className="slideMenu">
@@ -35,7 +19,10 @@ class MenuSlide extends Component {
                   <img src={logo} alt="" />
                 </div>
                 <div className="search">
-                  {this.generateSearch()}
+                <div>
+                  <label>Buscar </label>
+                  <input type="text" placeholder="Herramientas"/>
+                </div>
                 </div>
                 <div className="buttonSlide">
                   <IconButton aria-label="menu">
