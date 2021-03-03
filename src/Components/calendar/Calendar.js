@@ -102,9 +102,19 @@ export class Calendar extends React.Component{
       return false;
     }
 
+    isFree = day => {
+      for (let value of this.props.freeDates) {
+        if (isSameDay(day,value)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
     getTypeCol(day, monthStart){
       if (!isSameMonth(day, monthStart)) return "disabled";
       if (this.isReserved(day)) return "reserved" ;
+      if (this.isFree(day)) return "free" ;
       return  isSameDay(day, new Date()) ? "selected" : "" ;
     }
 

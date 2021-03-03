@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
       
-      <Calendar dates={[new Date("03-01-2021"),new Date("03-12-2021")]}/>
+      <Calendar dates={[new Date("03-01-2021"),new Date("03-12-2021")]} freeDates={[new Date('03-16-2021'),new Date("03-25-2021")]}/>
 
 
     </div>

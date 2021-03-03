@@ -162,6 +162,12 @@ body {
     border-image-slice: 1;
 }
 
+.calendar .body .free {
+    border-left: 10px solid transparent;
+    border-image: linear-gradient(45deg, #079642 0%, #39d16c 40%);
+    border-image-slice: 1;
+}
+
 .calendar .body .row {
     border-bottom: 1px solid var(--border-color);
 }
@@ -213,7 +219,11 @@ body {
     color: red;
 }
 
-
+.calendar .body .free .bg {
+    opacity: 0.1;
+    transition: 0.5s ease-in;
+    color: green;
+}
 
 .calendar .body .col {
     flex-grow: 0;
