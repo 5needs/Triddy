@@ -1,0 +1,14 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    margin-left: 40%;
+    margin-top: 0%;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+.right-margin {
+    margin-right: 15px;
+}
