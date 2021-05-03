@@ -1,10 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Rutas from './Components/App';
-import Conversation from './Components/conversation/Conversation';
-import ConversationList from './Components/conversationList/ConversationList';
-import ItemsRentados from './Components/itemsRentados/ItemsRentados';
-import FormularioCalificacion from './Components/formularioCalificacion/FormularioCalificacion';
+
 
 function App() {
   return (
@@ -23,11 +19,6 @@ function App() {
           Learn React
         </a>
       </header>
-	  <Rutas />
-	  <ConversationList />
-	  <Conversation />
-	  <ItemsRentados />
-	  <FormularioCalificacion /> 
     </div>
   );
 }
