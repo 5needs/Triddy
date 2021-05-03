@@ -1,0 +1,39 @@
+.slideMenu{
+    width: 95%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    background-color: orange;
+    margin: 2%;
+
+}
+
+.containerLogo{
+    /* background-color: antiquewhite; */
+    overflow: hidden;
+    margin: 1%;
+    /* margin: 2% 20% 3% 0%; */
+}
+
+.containerLogo img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.search{
+    /* background-color: aliceblue; */
+    font-size: 40px;
+    color: white;
+}
+
+.search input{
+    font-size: 30px;
+    width: 60%;
+    /* width: 850px; */
+    
+}
+.buttonSlide{
+    /* background-color: aqua; */
+    padding-left: 10%;
+}

@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import EditProfile from './Components/editProfile/pages/EditProfile';
 
 function App() {
   return (
