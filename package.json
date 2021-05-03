@@ -8,7 +8,10 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.1",
+    "@material-ui/pickers": "^3.2.10",
+    "react-number-format": "^4.4.4",
+    "react-multiple-datepicker": "^0.1.0",
+    "@testing-library/user-event": "^12.7.3",
     "history": "^4.10.1",
     "moment": "^2.23.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -20,7 +23,7 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "4.0.2",
+    "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
