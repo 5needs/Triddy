@@ -1,0 +1,46 @@
+.contenedor_usuario{
+    display: grid;
+    grid-template-columns: 450px 750px;
+}
+.grid-item-sub1{
+    height: 590px;    
+}
+.grid-item-sub2{
+    background-color: #EFEFEF;
+    height: 590px;
+}
+.photo{
+    background-color: #808080;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 90%;
+    height: 420px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10px;
+    margin-top: 10%;
+    /* me ayuda a darle propiedades para que el objeto se mueva libre de su contenedor */
+    position: relative;
+    overflow: hidden;
+}
+.information-user{
+    display: block;
+    padding: 20px;
+    margin-top: 10%;
+    margin-left: 3%;
+    margin: 20px;
+    height: 420px;
+    width: 755px;
+    font-size: 50px;
+    /* Hacer que el texto se esconda y baje el texto debajo*/
+    overflow-wrap: break-word;
+}
+.information-user input{
+    font-size: 25px;
+
+}
+.button-back{
+    margin-top: 10%;
+}
