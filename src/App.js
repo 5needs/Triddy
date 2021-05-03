@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Devolution from './Components/Devoltion/Devolution';
 
 function App() {
   return (
