@@ -1,6 +1,6 @@
 import React from 'react';
 import './ConversationListItem.css';
-import { history } from './../App'
+import { history } from '../Routes'
 import shave from 'shave'
 
 const MY_USER_ID = 1;

@@ -2,7 +2,7 @@ import React from 'react';
 import './ToolBar.css';
 import { IoIosArrowDropleftCircle } from 'react-icons/io';
 import IconButton from '@material-ui/core/IconButton';
-import { history } from './../App'
+import { history } from '../Routes'
 
 class ToolBar extends React.Component {
     constructor(props){
