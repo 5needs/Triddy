@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {ProductEdit} from './ProductEdit';
+import {ProductDelete} from './ProductDelete';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Checkout() {
+export default function DeleteCheckout() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -56,11 +56,11 @@ export default function Checkout() {
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
-            Editar Producto
+            Eliminar producto
           </Typography>
           <br/>
           <React.Fragment>
-            <ProductEdit />
+            <ProductDelete />
               <Button
                 variant="contained"
                 color="primary"

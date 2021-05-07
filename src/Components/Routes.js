@@ -6,6 +6,10 @@ import FormularioCalificacion from './formularioCalificacion/FormularioCalificac
 import {BrowserRouter as Link, Route, Switch, BrowserRouter} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { Login } from './login/Login';
+import EditCheckout from './edit-product/EditCheckout';
+import DeleteCheckout from './delete-product/DeleteCheckout';
+import RentCheckout from './rent-product/RentCheckout';
+import RegisterCheckout from './Product-register/RegisterCheckout'
 import Home from './Home/Home';
 
 export const history = createBrowserHistory({forceRefresh:true});
@@ -20,6 +24,10 @@ export default class Routes extends React.Component {
 				<Route path={"/Rentados"} component={ItemsRentados}/>
 				<Route path={"/Calificacion"} component={FormularioCalificacion}/>
 				<Route path={"/login"} component={Login}/>
+				<Route path={"/edit"} component={EditCheckout}/>
+				<Route path={"/delete"} component={DeleteCheckout}/>
+				<Route path={"/rent"} component={RentCheckout}/>
+				<Route path={"/register"} component={RegisterCheckout}/>
 				<Route path={"/"} component={Home}/>
 				</Switch>
 			</BrowserRouter>

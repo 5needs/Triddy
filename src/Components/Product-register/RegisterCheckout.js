@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Checkout() {
+export default function RegisterCheckout() {
   const classes = useStyles();
   return (
     <React.Fragment>
