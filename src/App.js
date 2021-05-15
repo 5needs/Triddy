@@ -1,6 +1,5 @@
 import './App.css';
 import Routes from './Components/Routes';
-import logo from './logo.svg';
 
 function App() {
   return (
