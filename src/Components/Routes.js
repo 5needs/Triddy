@@ -1,20 +1,25 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter} from 'react-router-dom';
+import { Switch, Router} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { Login } from './login/Login';
-
 
 export const history = createBrowserHistory({forceRefresh:true});
 
 export default class Routes extends React.Component {
+	constructor(props){
+		super(props);
+		this.changeColor = this.changeColor.bind(this);
+	}
+
 	render(){
 		return(
-			<BrowserRouter history={history}>
+			<Router history={history}>
 				<Switch>
-					<Route path={"/login"} component={Login}/>
 				</Switch>
-			</BrowserRouter>
+			</Router>
 		);
 	}
 	
+	changeColor(code){
+        document.body.style.backgroundColor = code;
+    }
 }

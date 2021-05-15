@@ -38,11 +38,7 @@ const CssTextField = withStyles({
 export class Login extends React.Component{
     constructor(props){
         super(props);
-        this.changeColor();
-    }
-
-    changeColor(){
-        document.body.style.backgroundColor = " #fff4e7";
+        this.props.changeColor("#fff4e7");
     }
 
     render(){
