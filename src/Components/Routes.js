@@ -3,7 +3,7 @@ import Conversation from './conversation/Conversation';
 import ConversationList from './conversationList/ConversationList';
 import ItemsRentados from './itemsRentados/ItemsRentados';
 import FormularioCalificacion from './formularioCalificacion/FormularioCalificacion';
-import {BrowserRouter as Link, Route, Switch, BrowserRouter} from 'react-router-dom';
+import { Route, Switch, BrowserRouter} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { Login } from './login/Login';
 import EditCheckout from './edit-product/EditCheckout';

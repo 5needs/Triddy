@@ -1,63 +1,84 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import { Button, Checkbox, CssBaseline, FormControlLabel, Grid, Link, TextField, ThemeProvider, Typography } from '@material-ui/core';
+import { Button, Grid, Link, TextField, ThemeProvider, Typography } from '@material-ui/core';
 import './Login.css';
-import { createMuiTheme } from '@material-ui/core/styles';
-
+import { createMuiTheme, withStyles } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#e7710a",
+    palette: {
+        primary: {
+            main: "#e7710a",
+        },
+        secondary: {
+            main: "#d4ac0d",
+        }
     },
-    secondary: {
-      main: "#ca1e1e",
-    },
-  },
+    
 });
-localStorage.setItem('username', 'test@somemail.com');
-localStorage.setItem('password', '1234567');
+
+const CssTextField = withStyles({
+    root: {
+      '& label.Mui-focused': {
+            color: theme.palette.primary.main,
+        },
+      '& .MuiFormLabel-root': {
+            color: theme.palette.secondary.main,
+        },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+            borderColor: theme.palette.secondary.main,
+        },
+        '&:hover fieldset': {
+            borderColor: theme.palette.primary.main,
+        },
+      },
+    },
+  })(TextField);
 
 export class Login extends React.Component{
     constructor(props){
         super(props);
+        this.changeColor();
+    }
+
+    changeColor(){
+        document.body.style.backgroundColor = " #fff4e7";
     }
 
     render(){
         return (
             <ThemeProvider theme={theme}>
-                <Container className="container" component="main" maxWidth="xs">
-                <CssBaseline/>
-                <div className="paper" >
-                    <Typography component="h1" variant="h4" >
-                        Sign in
+                <Container className="logincontainer" component="main" maxWidth="xs">
+                <img className="loginImage" src="logo.png" alt="logo"/> 
+                <div className="loginPaper" >
+
+                    <Typography component="h1" variant="h4" color="primary" >
+                        <div className="loginMessage">
+                        BIENVENIDO A TRIDDY
+                        </div>      
                     </Typography>
-                    <form className="form" noValidate >
-                        <TextField
+                    <form className="loginForm" noValidate >
+                        <CssTextField
                             variant="outlined"
                             margin="normal"
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
+                            label="E-mail"
                             name="email"
                             autoComplete="email"
                             autoFocus
                         />
-                        <TextField
+                        <CssTextField
                             variant="outlined"
                             margin="normal"
                             required
                             fullWidth
                             name="password"
-                            label="Password"
+                            label="Contraseña"
                             type="password"
                             id="password"
                             autoComplete="current-password"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
                         />
                         <Button 
                             type="submit"
@@ -66,17 +87,17 @@ export class Login extends React.Component{
                             color="primary"
                             className="submit"
                         >
-                            Sign In
+                            INGRESAR
                         </Button>
                         <Grid container className="linksGrid">
                             <Grid item xs>
                             <Link href="#" variant="body2">
-                                Forgot password?
+                                ¿Olvidaste tu contraseña?
                             </Link>
                             </Grid>
                             <Grid item>
                             <Link href="#" variant="body2">
-                                {"Don't have an account? Sign Up"}
+                                {"¿No tienes una cuenta?"} <br/> {"Registrate"}
                             </Link>
                             </Grid>
                         </Grid>
