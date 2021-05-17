@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import { Button, Grid, Link, TextField, ThemeProvider, Typography } from '@material-ui/core';
 import './Login.css';
 import { createMuiTheme, withStyles } from '@material-ui/core/styles';
+import axios from 'axios';
 
 const theme = createMuiTheme({
     palette: {
@@ -38,11 +39,39 @@ const CssTextField = withStyles({
 export class Login extends React.Component{
     constructor(props){
         super(props);
+        this.state = { email:'', password:''};
         this.changeColor("#fff4e7");
+        
+        this.handleSubmitChange = this.handleSubmitChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     changeColor(code){
         document.body.style.backgroundColor = code;
+    }
+
+    handleChange(event){
+        this.setState({ [event.target.name] : event.target.value});    
+    }
+
+    handleSubmitChange(e) {
+
+        axios.post('http://ec2-34-203-184-51.compute-1.amazonaws.com:8080/login', {
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then(function (response) {
+            console.log(response.data);
+            localStorage.setItem("token",response.data.accessToken);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+        window.location.href = "/";
+
+        e.preventDefault();
+
     }
 
     render(){
@@ -57,7 +86,7 @@ export class Login extends React.Component{
                         BIENVENIDO A TRIDDY
                         </div>      
                     </Typography>
-                    <form className="loginForm" noValidate >
+                    <form className="loginForm" noValidate onSubmit={this.handleSubmitChange}>
                         <CssTextField
                             variant="outlined"
                             margin="normal"
@@ -68,6 +97,7 @@ export class Login extends React.Component{
                             name="email"
                             autoComplete="email"
                             autoFocus
+                            onChange={this.handleChange} 
                         />
                         <CssTextField
                             variant="outlined"
@@ -79,6 +109,7 @@ export class Login extends React.Component{
                             type="password"
                             id="password"
                             autoComplete="current-password"
+                            onChange={this.handleChange} 
                         />
                         <Button 
                             type="submit"

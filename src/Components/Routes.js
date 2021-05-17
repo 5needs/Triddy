@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Router, Route} from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { Login } from './login/Login';
 
@@ -9,7 +9,7 @@ export default class Routes extends React.Component {
 
 	render(){
 		return(
-			<Router history={history}>
+			<Router>
 				<Switch>
 					<Route path={"/login"} component={Login} />
 				</Switch>
