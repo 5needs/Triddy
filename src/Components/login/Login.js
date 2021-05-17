@@ -4,6 +4,7 @@ import { Button, Grid, Link, TextField, ThemeProvider, Typography } from '@mater
 import './Login.css';
 import { createMuiTheme, withStyles } from '@material-ui/core/styles';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 const theme = createMuiTheme({
     palette: {
@@ -46,6 +47,10 @@ export class Login extends React.Component{
         this.handleChange = this.handleChange.bind(this);
     }
 
+    componentDidMount(){
+        this.redirect();
+    }
+
     changeColor(code){
         document.body.style.backgroundColor = code;
     }
@@ -55,23 +60,39 @@ export class Login extends React.Component{
     }
 
     handleSubmitChange(e) {
+        this.login();
+        e.preventDefault();
 
-        axios.post('http://ec2-34-203-184-51.compute-1.amazonaws.com:8080/login', {
+    }
+
+    async login(){
+        await axios.post('http://ec2-34-203-184-51.compute-1.amazonaws.com:8080/login', {
             email: this.state.email,
             password: this.state.password
         })
         .then(function (response) {
-            console.log(response.data);
             localStorage.setItem("token",response.data.accessToken);
+            swal({
+                title: "Iniciando sesión",
+                icon: "success"
+            });
+            
         })
         .catch(function (error) {
             console.log(error);
+            swal({
+                title: "Wrong Data",
+                icon: "error"
+            });
         });
 
-        window.location.href = "/";
+        setTimeout(this.redirect,2000);
+    }
 
-        e.preventDefault();
-
+    redirect(){
+        if (localStorage.getItem("token")){
+            window.location.href = "/";
+        }
     }
 
     render(){
