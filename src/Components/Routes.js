@@ -8,6 +8,7 @@ export const history = createBrowserHistory({forceRefresh:true});
 
 export default class Routes extends React.Component {
 
+	 /* istanbul ignore next */
 	TestView = () => (
 		<div className="testView">
 		  Hola

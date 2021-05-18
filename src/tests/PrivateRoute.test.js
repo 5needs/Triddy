@@ -1,7 +1,8 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import { PrivateRoute } from '../Components/PrivateRoute';
-import localStorage from './localStorage';
+
+import localStorage from '../localstorage';
 
 global.localStorage = localStorage;
 window.localStorage = global.localStorage;
