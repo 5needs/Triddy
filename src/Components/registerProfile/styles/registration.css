@@ -4,8 +4,8 @@
     width: 95%;
     display: grid;
     grid-template-columns: 45% 75%;
-    
 }
+
 .grid-item-sub1{
     height: 59%;  
     width: 40%;  
@@ -61,15 +61,20 @@
 }
 
 .button__personal__information{
-    margin-top: 12%;
+    margin-top: 2%;
 }
 
 .semester{
-    margin-right: 69%;
-    width: 125px;
+    margin-right: 44%;
+    width: 290px;
 }
 
 .register {
-    margin-left: 19%;
+    margin-left: 10%;
     margin-top: 6%;
+  }
+
+.underheader{
+    width: 15%;
+    height: 150px;
   }

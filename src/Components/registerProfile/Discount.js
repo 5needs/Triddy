@@ -7,10 +7,8 @@ class Discount extends Component {
         const {number, type} = this.props
         return (
             <div className="discount">
-                <div className="disccount__description">
-                    <h2>Disscount: {type}</h2>
-                    <h3>Disscount x 1: ${number}</h3>
-                </div>
+                    <h2 className="disccount__description">Disscount: {type}</h2>
+                    <h3 className="disccount__description">Disscount x 1: ${number}</h3>
             </div>
         );
     }

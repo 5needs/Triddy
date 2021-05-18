@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Discount from '../Discount';
 import MenuSlide from '../MenuSlide';
 import Registration from '../Registration';
+import '../styles/registration.css'
 
 class Register extends Component {
  
@@ -13,6 +14,7 @@ class Register extends Component {
           <div className="register">
             <Registration/>
           </div>
+          <div className="underheader"/>
       </div>
     );
   }
