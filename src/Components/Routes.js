@@ -19,15 +19,7 @@ export default class Routes extends React.Component {
 		return(
 			<BrowserRouter history={history}>
 				<Switch>
-				<Route path={"/Conversations"} component={ConversationList}/>
-				<Route path={"/Conversation"} component={Conversation}/>
-				<Route path={"/Rentados"} component={ItemsRentados}/>
-				<Route path={"/Calificacion"} component={FormularioCalificacion}/>
 				<Route path={"/login"} component={Login}/>
-				<Route path={"/edit"} component={EditCheckout}/>
-				<Route path={"/delete"} component={DeleteCheckout}/>
-				<Route path={"/rent"} component={RentCheckout}/>
-				<Route path={"/register"} component={RegisterCheckout}/>
 				<Route path={"/"} component={Home}/>
 				</Switch>
 			</BrowserRouter>
