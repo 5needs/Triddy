@@ -10,7 +10,7 @@ import EditCheckout from './edit-product/EditCheckout';
 import DeleteCheckout from './delete-product/DeleteCheckout';
 import RentCheckout from './rent-product/RentCheckout';
 import RegisterCheckout from './Product-register/RegisterCheckout'
-import RegisterProfile from './registerProfile/RegisterProfile'
+import RegisterProfile from './registerProfile/pages/Register'
 import Home from './Home/Home';
 
 export const history = createBrowserHistory({forceRefresh:true});

@@ -1,13 +1,21 @@
 .contenedor_usuario{
+    display: block;
+    object-fit: contain; /* kepp size with zoom and zoom out */
+    width: 95%;
     display: grid;
-    grid-template-columns: 450px 750px;
+    grid-template-columns: 45% 75%;
+    
 }
 .grid-item-sub1{
-    height: 590px;    
+    height: 59%;  
+    width: 40%;  
 }
 .grid-item-sub2{
     background-color: #EFEFEF;
-    height: 590px;
+    height: 105%;
+    width: 75%;
+    overflow:hidden;
+    margin: 1%;
 }
 .photo{
     background-color: #808080;
@@ -28,8 +36,6 @@
 .information-user{
     display: block;
     padding: 20px;
-    margin-top: 10%;
-    margin-left: 3%;
     margin: 20px;
     height: 420px;
     width: 755px;
@@ -37,10 +43,33 @@
     /* Hacer que el texto se esconda y baje el texto debajo*/
     overflow-wrap: break-word;
 }
+
+.personal__information {
+    margin: 17px;
+}
+
+.critical__information {
+    margin-right: 45%;
+}
+
 .information-user input{
     font-size: 25px;
+}
 
-}
 .button-back{
-    margin-top: 10%;
+    margin-top: 12%;
 }
+
+.button__personal__information{
+    margin-top: 12%;
+}
+
+.semester{
+    margin-right: 69%;
+    width: 125px;
+}
+
+.register {
+    margin-left: 19%;
+    margin-top: 6%;
+  }
