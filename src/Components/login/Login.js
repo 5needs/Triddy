@@ -66,8 +66,7 @@ export class Login extends React.Component{
     }
 
     async login(){
-        let string = "http";
-        await axios.post(string+'://ec2-34-203-184-51.compute-1.amazonaws.com:8080/login', {
+        await axios.post('http://ec2-34-203-184-51.compute-1.amazonaws.com:8080/login', {
             email: this.state.email,
             password: this.state.password
         })
