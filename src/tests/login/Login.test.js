@@ -5,10 +5,6 @@ import shallow from 'enzyme/build/shallow';
 describe("Login", () => {
     afterEach(cleanup);
 
-    const props = {
-        login: () => {},
-       };
-
     it('deberia renderizar el login', () => {
         render(<Login/>);
     });
@@ -22,11 +18,10 @@ describe("Login", () => {
         wrapper.find('#email').simulate('change',eventEmail);
     });
 
-    it('should fail if no credentials are provided', () => {
+    it('validar submit', () => {
         const fakeEvent = { preventDefault: () => console.log('preventDefault') };
         const loginComponent = shallow(<Login />);
         expect(loginComponent.find('form').length).toBe(1);
         loginComponent.find('form').simulate('submit', fakeEvent);
     });
-
 });

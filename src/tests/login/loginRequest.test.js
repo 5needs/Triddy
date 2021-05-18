@@ -35,16 +35,6 @@ describe('Login tests', () => {
       );
     });
 
-    // it('should call endpoint with given email & password 2', async () => {
-
-    //   const fakeEvent = { preventDefault: () => console.log('preventDefault') };
-    //   const loginComponent = shallow(<Login />);
-    //   loginComponent.setState({ email: 'user1@mail.com', password: 'password1' });
-    //   loginComponent.find('form').simulate('submit', fakeEvent);
-
-    //   axios.post.mockImplementation(() => Promise.resolve({ data: {accessToken: "aaaaaa"} }));
-    // });
-
     
   });
 });
