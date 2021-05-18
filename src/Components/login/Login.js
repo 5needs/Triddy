@@ -73,7 +73,7 @@ export class Login extends React.Component{
         .then(function (response) {
             localStorage.setItem("token",response.data.accessToken);
             swal({
-                title: "Iniciando sesión",
+                title: "Login",
                 icon: "success"
             });
             
@@ -138,6 +138,7 @@ export class Login extends React.Component{
                             variant="contained"
                             color="primary"
                             className="submit"
+                            id="submitButton"
                         >
                             INGRESAR
                         </Button>
