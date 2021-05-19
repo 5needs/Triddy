@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import logo from './images/logo.png'
 import './styles/registration.css'
 import axios from "axios";
+import { NavLink } from 'react-router-dom';
 
 class Registration extends Component {
   
@@ -58,7 +59,8 @@ class Registration extends Component {
       })
       .then((response) => {
         console.log(response.data);
-      })
+        alert("Successful Registration")
+      })                                     
       .catch((error) => {
         alert("Api Backend Error")
         console.log(error);
@@ -135,14 +137,26 @@ class Registration extends Component {
                 onChange={this.handleChange}
               />
               <br />
-              <Button
-                variant="contained"
-                color="primary"
-                className="button__personal__information"
-                onClick={this.handleSubmit}
-              >
-                Sign up
-              </Button>
+              <div className="buttons__personal__information">
+                <div>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className="button__personal__information"
+                    onClick={this.handleSubmit}
+                  >
+                    Sign up
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className="button__personal__information"
+                    onClick={this.handleSubmit}
+                  >
+                    Next
+                  </Button>
+                </div>
+              </div>
             </form>
           </div>
         </div>

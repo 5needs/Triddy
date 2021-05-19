@@ -56,16 +56,26 @@
     font-size: 25px;
 }
 
+.buttons__personal__information{
+    display : flex; /* column to row*/ 
+    object-fit: contain;
+    margin-top: 2%;
+    margin-right: 13%;
+}
+
+.button__personal__information{
+    object-fit: contain;
+    padding: 20px;
+}
+
 .button-back{
     margin-top: 12%;
 }
 
-.button__personal__information{
-    margin-top: 2%;
-}
+
 
 .semester{
-    margin-right: 44.9%;
+    margin-right: 44%;
     width: 290px;
 }
 
