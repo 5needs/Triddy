@@ -14,9 +14,6 @@ const theme = createMuiTheme({
   });
 
 export class FavoriteItem extends React.Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return (
@@ -30,26 +27,35 @@ export class FavoriteItem extends React.Component{
 
                             <Grid item xs={12} sm container>
                                 <Grid item xs container direction="column" spacing={2} alignItems="flex-start" justify="flex-end">
-                                    <Grid item xs>           
+                                    <Grid item xs>
+                                        <Typography gutterBottom variant="subtitle1">
+                                            {this.props.name}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs >           
                                         <Typography gutterBottom variant="body2">
                                             {this.props.description}
                                         </Typography>
                                     </Grid>
-                                    <Grid item >
-                                        <Typography gutterBottom variant="subtitle1">
-                                            Precio: $ {this.props.price}
+
+                                    <Grid item >           
+                                        <Typography gutterBottom variant="overline">
+                                            {this.props.available ? "Disponible": "Ocupado"}
                                         </Typography>
                                     </Grid>
                                     
+                                    
                                 </Grid>
+                                <div classname="button">
                                 <Grid item >
                                     <ThemeProvider theme={theme}>
-                                        <Button variant="contained" color="primary">
+                                        <Button size="large" variant="contained" color="primary"> 
                                             Añadir 
-                                        </Button>
+                                        </Button>   
                                     </ThemeProvider>
+                                    
                                 </Grid>
-                                
+                                </div> 
                             </Grid>
                         </Grid>
                     </div>

@@ -40,7 +40,8 @@ const CssTextField = withStyles({
 export class Login extends React.Component{
     constructor(props){
         super(props);
-        this.state = { email:'', password:''};
+        let url = "http://ec2-34-203-184-51.compute-1.amazonaws.com:8080";
+        this.state = { email:'', password:'', url: url};
         this.changeColor("#fff4e7");
         
         this.handleSubmitChange = this.handleSubmitChange.bind(this);
@@ -66,12 +67,15 @@ export class Login extends React.Component{
     }
 
     async login(){
-        await axios.post('http://ec2-34-203-184-51.compute-1.amazonaws.com:8080/login', {
-            email: this.state.email,
+        let email = this.state.email;
+        await axios.post(this.state.url + '/login', {
+            email: email,
             password: this.state.password
         })
         .then(function (response) {
             localStorage.setItem("token",response.data.accessToken);
+            /* istanbul ignore next */
+            localStorage.setItem("user",email);
             /* istanbul ignore next */
             swal({
                 title: "Login",

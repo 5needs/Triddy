@@ -1,26 +1,22 @@
 import React from 'react';
-import { Switch, Router, Route} from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { Login } from './login/Login';
 import { PrivateRoute } from './PrivateRoute';
+import { NotificationComponent } from './notifications/NotificationComponent';
+import { FavoritesComponent } from './favorites/FavoritesComponent';
 
 export const history = createBrowserHistory({forceRefresh:true});
 
 export default class Routes extends React.Component {
 
-	 /* istanbul ignore next */
-	TestView = () => (
-		<div className="testView">
-		  Hola
-		</div>
-	  );
-
 	render(){
 		return(
-			<Router history={history}>
+			<Router >
 				<Switch>
 					<Route path={"/login"} component={Login} />
-					<PrivateRoute path={"/"} component={this.TestView}/>
+					<PrivateRoute path={"/favorites"} component={FavoritesComponent}/>
+					<PrivateRoute path={"/notifications"} component={NotificationComponent}/>
 				</Switch>
 			</Router>
 		);
