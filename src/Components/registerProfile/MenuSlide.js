@@ -30,14 +30,14 @@ class MenuSlide extends Component {
 
   render() {
     return (
-        <div className="slideMenu">
-                <div className="containerLogo">
+        <div className="slideMenu_register">
+                <div className="containerLogo_register">
                   <img src={logo} alt="" />
                 </div>
-                <div className="search">
+                <div className="search_register">
                   {this.generateSearch()}
                 </div>
-                <div className="buttonSlide">
+                <div className="buttonSlide_register">
                   <IconButton aria-label="menu">
                     <MenuIcon  style={{ color: orange[50], fontSize: 40}}/>
                   </IconButton>

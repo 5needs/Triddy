@@ -1,4 +1,4 @@
-.contenedor_usuario{
+.contenedor_usuario_register{
     display: block;
     object-fit: contain; /* kepp size with zoom and zoom out */
     width: 95%;
@@ -6,18 +6,18 @@
     grid-template-columns: 45% 75%;
 }
 
-.grid-item-sub1{
+.grid-item-sub1_register{
     height: 59%;  
     width: 40%;  
 }
-.grid-item-sub2{
+.grid-item-sub2_register{
     background-color: #EFEFEF;
     height: 105%;
     width: 75%;
     overflow:hidden;
     margin: 1%;
 }
-.photo{
+.photo_register{
     background-color: #808080;
     display: block;
     box-sizing: border-box;
@@ -33,7 +33,7 @@
     position: relative;
     overflow: hidden;
 }
-.information-user{
+.information-user_register{
     display: block;
     padding: 20px;
     margin: 20px;
@@ -44,37 +44,37 @@
     overflow-wrap: break-word;
 }
 
-.personal__information {
+.personal__information_register {
     margin: 17px;
 }
 
-.critical__information {
+.critical__information_register {
     margin-right: 45%;
 }
 
-.information-user input{
+.information-user_register input{
     font-size: 25px;
 }
 
-.button-back{
+.button-back_register{
     margin-top: 12%;
 }
 
-.button__personal__information{
+.button__personal__information_register{
     margin-top: 2%;
 }
 
-.semester{
+.semester_register{
     margin-right: 44%;
     width: 290px;
 }
 
-.register {
+.register_register {
     margin-left: 10%;
     margin-top: 6%;
   }
 
-.underheader{
+.underheader_register{
     width: 15%;
     height: 150px;
   }

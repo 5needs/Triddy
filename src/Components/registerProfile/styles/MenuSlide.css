@@ -1,4 +1,4 @@
-.slideMenu{
+.slideMenu_register{
     width: 95%;
     height: 70px;
     display: grid;
@@ -7,32 +7,32 @@
     margin: 2%;
 }
 
-.containerLogo{
+.containerLogo_register{
     /* background-color: antiquewhite; */
     overflow: hidden;
     margin: 1%;
     /* margin: 2% 20% 3% 0%; */
 }
 
-.containerLogo img{
+.containerLogo_register img{
     object-fit: contain;
     width: 100%;
     height: 100%;
 }
 
-.search{
+.search_register{
     /* background-color: aliceblue; */
     font-size: 40px;
     color: white;
 }
 
-.search input{
+.search_register input{
     font-size: 30px;
     width: 60%;
     /* width: 850px; */
     
 }
-.buttonSlide{
+.buttonSlide_register{
     /* background-color: aqua; */
     padding-left: 10%;
 }

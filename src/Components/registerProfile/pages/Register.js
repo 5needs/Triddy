@@ -11,10 +11,10 @@ class Register extends Component {
       <div>
           <MenuSlide/>
           <Discount number="2000" type="First time"/>
-          <div className="register">
+          <div className="register_register">
             <Registration/>
           </div>
-          <div className="underheader"/>
+          <div className="underheader_register"/>
       </div>
     );
   }

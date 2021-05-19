@@ -82,26 +82,26 @@ class Registration extends Component {
   render() {
 
     return (
-      <div className="contenedor_usuario">
-        <div className="grid-item-sub1">
-          <div className="photo">
+      <div className="contenedor_usuario_register">
+        <div className="grid-item-sub1_register">
+          <div className="photo_register">
             <img src={logo} />
           </div>
-          <div className="button-back">
+          <div className="button-back_register">
             <Button variant="contained" color="primary">
               Back
             </Button>
           </div>
         </div>
-        <div className="grid-item-sub2">
-          <div className="information-user">
+        <div className="grid-item-sub2_register">
+          <div className="information-user_register">
             <form id="form">
               <input
                 type="text"
                 name="fullName"
                 required=""
                 placeholder="Full Name"
-                className="personal__information"
+                className="personal__information_register"
                 onChange={this.handleChange}
               />
               <input
@@ -109,10 +109,10 @@ class Registration extends Component {
                 name="career"
                 required=""
                 placeholder="Career"
-                className="personal__information"
+                className="personal__information_register"
                 onChange={this.handleChange}
               />
-              <div className="critical__information">
+              <div className="critical__information_register">
                 <input
                   type="email"
                   name="email"
@@ -143,7 +143,7 @@ class Registration extends Component {
               <input
                 type="text"
                 name="university"
-                className="semester"
+                className="semester_register"
                 placeholder="University"
                 onChange={this.handleChange}
               />
@@ -151,7 +151,7 @@ class Registration extends Component {
               <Button
                 variant="contained"
                 color="primary"
-                className="button__personal__information"
+                className="button__personal__information_register"
                 onClick={this.handleSubmit}
               >
                 Sign up
