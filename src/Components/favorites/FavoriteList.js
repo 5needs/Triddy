@@ -3,10 +3,6 @@ import { FavoriteItem } from './FavoriteItem';
 import './favorites.css';
 
 export class FavoriteList extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
     render(){
         const favoritesList = this.props.favorites.map((fav, i) => {
             return (

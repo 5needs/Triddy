@@ -14,9 +14,6 @@ const theme = createMuiTheme({
   });
 
 export class FavoriteItem extends React.Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return (

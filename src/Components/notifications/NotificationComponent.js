@@ -1,7 +1,7 @@
 import React from 'react';
 import './Notifications.css';
 import { NotificationsList } from './NotificationsList';
-import {getNotifications, get} from '../apiaxios';
+import { get} from '../apiaxios';
 
 export class NotificationComponent extends React.Component{
 
@@ -18,7 +18,7 @@ export class NotificationComponent extends React.Component{
     }
 
     /* istanbul ignore next */
-    async setNotifList(notifList){
+    async setNotifList(){
         var notifList = [];
         let path = "/api/users/" + localStorage.getItem("user") + "/notifications";
         await get(this.state.urlusers,path)
