@@ -5,12 +5,9 @@ import { Grid, Typography } from '@material-ui/core';
 
 export class Notification extends React.Component{
     
-    constructor(props){
-        super(props);
-    }
     render(){
         return(
-            <a href="https://www.youtube.com/ ">
+            <a href={this.props.link}>
                 <div className="notification-item">
                     <Grid container alignItems="center" >
                         <Grid item xs={12} sm>
@@ -42,6 +39,6 @@ export class Notification extends React.Component{
 
     formatDate(date){
         const dateFormat = "dd/MM/yyyy";
-        return format(date,dateFormat);
+        return format(new Date (date),dateFormat);
     }
 }
