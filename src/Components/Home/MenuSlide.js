@@ -23,7 +23,7 @@ class MenuSlide extends Component {
         <div>
           <ul>
             <li><NavLink to="/login"><button>Log in</button></NavLink></li>
-            <li><NavLink><button>Registrate</button></NavLink></li>
+            <li><button>Registrate</button></li>
             
           </ul>
         </div>

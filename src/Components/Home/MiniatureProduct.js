@@ -10,9 +10,9 @@ class MiniatureProduct extends Component {
     // this.image = this.props.image;
     this.title = this.props.title;
     this.price = this.props.price;
+    this.image = this.props.image
     this.state = {};
   }
-
 
 
   render() {
