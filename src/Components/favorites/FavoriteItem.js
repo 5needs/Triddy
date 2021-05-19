@@ -37,19 +37,25 @@ export class FavoriteItem extends React.Component{
                                             {this.props.description}
                                         </Typography>
                                     </Grid>
+
+                                    <Grid item >           
+                                        <Typography gutterBottom variant="overline">
+                                            {this.props.available ? "Disponible": "Ocupado"}
+                                        </Typography>
+                                    </Grid>
                                     
                                     
                                 </Grid>
+                                <div classname="button">
                                 <Grid item >
                                     <ThemeProvider theme={theme}>
-                                        <div className="add-button">
-                                            <Button size="large" variant="contained" color="primary"> 
-                                                Añadir 
-                                            </Button>
-                                        </div>
+                                        <Button size="large" variant="contained" color="primary"> 
+                                            Añadir 
+                                        </Button>   
                                     </ThemeProvider>
+                                    
                                 </Grid>
-                                
+                                </div> 
                             </Grid>
                         </Grid>
                     </div>

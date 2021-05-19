@@ -21,10 +21,12 @@
     width:85%;
 }
 
-img {
-    margin: auto;
+.favoriteItem img {
+    
     display: block;
     max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 
@@ -35,4 +37,8 @@ img {
 .favoriteItemContainer{
     padding-right: 5%;
     background-color:#fdfaf2;
+}
+
+.favoriteItem .button{
+    margin-top: 20%;
 }

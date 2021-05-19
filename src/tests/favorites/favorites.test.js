@@ -32,6 +32,9 @@ describe("Favoritos", () => {
     });
 
     it('deberia renderizar un item de favoritos', () => {
+        shallow(<FavoriteItem key={0} name={"test name"} description={"test description"} img={"http://image.com"} available={true}/>);
+    });
+    it('deberia renderizar un item de favoritos no disponible', () => {
         shallow(<FavoriteItem key={0} name={"test name"} description={"test description"} img={"http://image.com"}/>);
     });
 });
