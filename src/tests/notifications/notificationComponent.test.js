@@ -10,7 +10,7 @@ function getIcon(){
     return(<FontAwesomeIcon color="#7D8491" icon={faGhost}/>);
 }
 
-describe("Login", () => {
+describe("Notificaciones", () => {
     afterEach(cleanup);
 
     it('deberia renderizar el componente', () => {
