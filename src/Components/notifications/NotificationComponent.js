@@ -1,42 +1,25 @@
-import axios from 'axios';
 import React from 'react';
 import './Notifications.css';
 import { NotificationsList } from './NotificationsList';
+import getNotifications from './apiuser';
 
 export class NotificationComponent extends React.Component{
 
     constructor(props){
         super(props);
-        let url = "http://ec2-34-203-184-51.compute-1.amazonaws.com:8080";
         this.state = {
-            items : [],
-            url : url
+            items : []
         }
+        this.setNotifList = this.setNotifList.bind(this);
     }
 
     componentDidMount() {
-        
-        this.axios = axios.create({
-            baseURL: this.state.url + "/api",
-            timeout: 1000,
-            headers: {'Authorization': 'Bearer ' + localStorage.getItem("token")}
-        });
-        let path = "users/" + localStorage.getItem("user") + "/notifications"
-        this.axios.get(path)
-        .then(response => response.data)
-        .then(data => {
-            let notifList = [];
-            data.forEach(function (notif) {
-                notifList.push(
-                    notif
-                )  
-            });
-            this.setState({items: notifList});
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-      }
+        getNotifications(this.setNotifList);
+    }
+
+    setNotifList(notifList){
+        this.setState({items: notifList});
+    }
 
     render(){
         return (
