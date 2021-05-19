@@ -1,7 +1,7 @@
 import React from 'react';
 import './Notifications.css';
 import { NotificationsList } from './NotificationsList';
-import getNotifications from './apiuser';
+import getNotifications from '../apiuser';
 
 export class NotificationComponent extends React.Component{
 
