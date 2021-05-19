@@ -27,7 +27,7 @@ class Home extends Component {
     return (
       <div className="mainContainer">
           <div className="Menuslide">
-            <MenuSlide search={true}/>
+            <MenuSlide isLogged={false}/>
           </div>
           <div className="slider">
               <ul>
