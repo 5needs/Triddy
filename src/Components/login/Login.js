@@ -74,6 +74,7 @@ export class Login extends React.Component{
         })
         .then(function (response) {
             localStorage.setItem("token",response.data.accessToken);
+            /* istanbul ignore next */
             localStorage.setItem("user",email);
             /* istanbul ignore next */
             swal({
