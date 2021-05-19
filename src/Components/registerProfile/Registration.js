@@ -38,18 +38,12 @@ class Registration extends Component {
   requestRegister(){
     console.log("requestRegister Api Backend_Triddy");
     console.log(this.state);
-    // async function fetchData() {
-    //   const request = await axios.post("fetchUrl");
-    //   console.log(request);
-    //   return request;
-    // }
-    // fetchData();
     this.axios = axios.create({
       baseURL: "http://localhost:42000/api/users",
       timeout: 1000,
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMkBtYWlsLmNvbSIsInJvbGVzIjoidXNlciIsImlhdCI6MTYyMTM3ODUyMH0.3ty-9wncSbtMVUJYalWGnAxoE-ffwZhund3566qvCQ8",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMkBtYWlsLmNvbSIsInJvbGVzIjoidXNlciIsImlhdCI6MTYyMTM5MTczM30.2EVLm5H3AE5W4DGhl6sls3K3r-s91PUP8ldJb1DAPdg",
       },
     });
     this.axios
@@ -64,17 +58,9 @@ class Registration extends Component {
       })
       .then((response) => {
         console.log(response.data);
-        // localStorage.setItem('token',response.data.accessToken);
-        // if(localStorage.getItem('Full name')===null) {
-        //     localStorage.setItem('Full name', "name to register");
-        // }
-        // localStorage.setItem('isLoggedLn', "true")
-        // alert("Token: "+localStorage.getItem('token'))
-        // window.location.reload(false);
       })
       .catch((error) => {
-        // localStorage.setItem('isLoggedLn', "false")
-        // alert("Sign up failed or not registration")
+        alert("Api Backend Error")
         console.log(error);
       });
   }
@@ -135,6 +121,7 @@ class Registration extends Component {
                     name="password"
                     required=""
                     placeholder="Password"
+                    autoComplete="on"
                     onChange={this.handleChange}
                   />
                 </label>
