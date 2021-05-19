@@ -7,18 +7,18 @@ export class FavoritesComponent extends React.Component{
     
     constructor(props){
         super(props);
-        let item1 = {
-            description: "Una bata de laboratorio",
-            price: 2000,
-            img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
-        }
-        let item2 = {
-            description: "Libro de fisica 1",
-            price: 5000,
-            img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
-        }
+        // let item1 = {
+        //     description: "Una bata de laboratorio",
+        //     price: 2000,
+        //     img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+        // }
+        // let item2 = {
+        //     description: "Libro de fisica 1",
+        //     price: 5000,
+        //     img : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+        // }
         this.state = {
-            items : [item1,item2],
+            items : [],
             urlusers : "http://ec2-34-203-184-51.compute-1.amazonaws.com:8080",
             urlproducts : "http://ec2-54-90-234-221.compute-1.amazonaws.com:35000"
         }
@@ -39,8 +39,11 @@ export class FavoritesComponent extends React.Component{
         .catch(function (error) {
             console.log(error);
         });
-
-        this.addProduct(ids[0]);
+        
+        for (let i of ids) {
+            this.addProduct(i)
+        }
+          
     }
 
     /* istanbul ignore next */
@@ -50,11 +53,25 @@ export class FavoritesComponent extends React.Component{
         await get(this.state.urlproducts,path)
         .then(function (response) {
             product = response;
-            console.log(product);
         })
         .catch(function (error) {
             console.log(error);
         });
+
+        let item = {
+            description: product.description,
+            name: product.name,
+            img : this.state.urlusers + "/photos/" + product.pictures[0]
+        }
+        
+        this.addItem(item);
+    }
+
+    /* istanbul ignore next */
+    addItem(item){
+        let itms = this.state.items;
+        itms.push(item);
+        this.setState({items : itms});
     }
 
     render(){

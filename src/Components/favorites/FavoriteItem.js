@@ -27,23 +27,26 @@ export class FavoriteItem extends React.Component{
 
                             <Grid item xs={12} sm container>
                                 <Grid item xs container direction="column" spacing={2} alignItems="flex-start" justify="flex-end">
-                                    <Grid item xs>           
+                                    <Grid item xs>
+                                        <Typography gutterBottom variant="subtitle1">
+                                            {this.props.name}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs >           
                                         <Typography gutterBottom variant="body2">
                                             {this.props.description}
                                         </Typography>
                                     </Grid>
-                                    <Grid item >
-                                        <Typography gutterBottom variant="subtitle1">
-                                            Precio: $ {this.props.price}
-                                        </Typography>
-                                    </Grid>
+                                    
                                     
                                 </Grid>
                                 <Grid item >
                                     <ThemeProvider theme={theme}>
-                                        <Button variant="contained" color="primary">
-                                            Añadir 
-                                        </Button>
+                                        <div className="add-button">
+                                            <Button size="large" variant="contained" color="primary"> 
+                                                Añadir 
+                                            </Button>
+                                        </div>
                                     </ThemeProvider>
                                 </Grid>
                                 
