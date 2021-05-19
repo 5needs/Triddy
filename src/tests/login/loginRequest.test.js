@@ -1,6 +1,5 @@
 import { Login } from '../../Components/login/Login';
 import axios from 'axios';
-import swal from 'sweetalert';
 import { shallow } from 'enzyme/build';
 
 // Mock axios, else you will really request the endpoint
