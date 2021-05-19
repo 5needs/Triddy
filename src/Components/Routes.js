@@ -4,7 +4,7 @@ import { createBrowserHistory } from 'history';
 import { Login } from './login/Login';
 import { PrivateRoute } from './PrivateRoute';
 import { NotificationComponent } from './notifications/NotificationComponent';
-import { FavoritesComponent } from './favorites/FavoritesComponent';
+// import { FavoritesComponent } from './favorites/FavoritesComponent';
 
 export const history = createBrowserHistory({forceRefresh:true});
 
@@ -15,7 +15,7 @@ export default class Routes extends React.Component {
 			<Router >
 				<Switch>
 					<Route path={"/login"} component={Login} />
-					<PrivateRoute path={"/favorites"} component={FavoritesComponent}/>
+					{/* <PrivateRoute path={"/favorites"} component={FavoritesComponent}/> */}
 					<PrivateRoute path={"/notifications"} component={NotificationComponent}/>
 				</Switch>
 			</Router>

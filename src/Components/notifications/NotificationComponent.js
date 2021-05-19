@@ -17,6 +17,7 @@ export class NotificationComponent extends React.Component{
         getNotifications(this.setNotifList);
     }
 
+    /* istanbul ignore next */
     setNotifList(notifList){
         this.setState({items: notifList});
     }
