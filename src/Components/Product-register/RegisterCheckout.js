@@ -8,10 +8,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {ProductRegister} from './ProductRegister';
 import { post } from '../apiaxios';
-
 var url = 'http://ec2-54-90-234-221.compute-1.amazonaws.com:35000';
 var path = '/api/products/create';
-
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: 'relative',
