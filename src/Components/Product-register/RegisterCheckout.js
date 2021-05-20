@@ -7,6 +7,10 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {ProductRegister} from './ProductRegister';
+import { post } from '../apiaxios';
+
+var url = 'http://ec2-54-90-234-221.compute-1.amazonaws.com:35000';
+var path = '/api/products/create';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -50,6 +54,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RegisterCheckout() {
   const classes = useStyles();
+  const register = () => {
+    var body = {
+      userId: localStorage.getItem('user'),
+      pictures: ["60a557dc7e5ead2649a06c8d"],
+      description: localStorage.getItem('description'),
+      name: localStorage.getItem('product-name'),
+      available: true
+    };
+    post(url,path,body)
+  }
   return (
     <React.Fragment>
       <CssBaseline />
@@ -73,6 +87,7 @@ export default function RegisterCheckout() {
                 variant="contained"
                 color="primary"
                 className={classes.button}
+                onClick={register}
                 >
                 Hecho
                 </Button>

@@ -5,6 +5,17 @@ import TextField from '@material-ui/core/TextField';
 import NumberFormat from 'react-number-format';
 
 export class ProductRegister extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangeDescription = this.handleChangeDescription.bind(this);
+  }
+  handleChangeName(e) {
+    localStorage.setItem('product-name', e.target.value);
+  }
+  handleChangeDescription(e) {
+    localStorage.setItem('description', e.target.value);
+  }
   render() {
     function NumberFormatCustom(props) {
       const { inputRef, onChange, ...other } = props;
@@ -38,6 +49,7 @@ export class ProductRegister extends React.Component {
               id="Titulo"
               name="Titulo"
               label="Titulo"
+              onChange={this.handleChangeName}
               fullWidth
             />
           </Grid>
@@ -47,6 +59,7 @@ export class ProductRegister extends React.Component {
               id="Description"
               name="Description"
               label="Descriptión"
+              onChange={this.handleChangeDescription}
               fullWidth
             />
           </Grid>
@@ -61,17 +74,9 @@ export class ProductRegister extends React.Component {
               }}
             />
           </Grid>
+          <br/>
+          <br/>
           <Grid item xs={12}>
-            <TextField
-              label="disponibilidad"
-              name="disponibilidad"
-              id="disponibilidad"
-              fullWidth
-            />
-          </Grid>
-          <br/>
-          <br/>
-          <Grid Grid item xs={12}>
             Imagenes del producto
             <br/><br/>
             <input

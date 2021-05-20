@@ -98,7 +98,7 @@ export default function RentCheckout() {
       userEmail: localStorage.getItem('user'),
       productId: "productId3", 
       initialDate: new Date(),
-      finalDate: sumDays(new Date, parseInt(localStorage.getItem('days'))),
+      finalDate: sumDays(new Date(), parseInt(localStorage.getItem('days'))),
       status: "occupied"
   };
     post(url,path,body)
