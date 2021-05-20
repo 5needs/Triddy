@@ -12,6 +12,14 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import { post } from '../apiaxios';
+
+var url = 'http://localhost:8080';
+var path = '/api/rents/create';
+localStorage.setItem('product-name',"Bata");
+localStorage.setItem('lugar',"Bloque B");
+localStorage.setItem('price',5000)
+localStorage.setItem('total', localStorage.getItem('price') * parseInt(localStorage.getItem('days')))
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -79,6 +87,23 @@ export default function RentCheckout() {
     setActiveStep(activeStep - 1);
   };
 
+  const sumDays = (date, days) => {
+    date.setDate(date.getDate() + days);
+    return date;
+  };
+
+  const rent = () => {
+    console.log("hola si entro");
+    var body = {
+      userEmail: localStorage.getItem('user'),
+      productId: "productId3", 
+      initialDate: new Date(),
+      finalDate: sumDays(new Date, parseInt(localStorage.getItem('days'))),
+      status: "occupied"
+  };
+    post(url,path,body)
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -103,14 +128,7 @@ export default function RentCheckout() {
           </Stepper>
           <React.Fragment>
             {activeStep === steps.length ? (
-              <React.Fragment>
-                <Typography variant="h5" gutterBottom>
-                  Gracias por su orden
-                </Typography>
-                <Typography variant="subtitle1">
-                  mensaje por validar :)
-                </Typography>
-              </React.Fragment>
+              rent()
             ) : (
               <React.Fragment>
                 {getStepContent(activeStep)}

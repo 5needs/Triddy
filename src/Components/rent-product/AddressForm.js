@@ -8,6 +8,18 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 
 export class AddressForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {days:1}
+    this.handleChangeDays = this.handleChangeDays.bind(this);
+  }
+  handleChangeDays(e) {
+    console.log(e.target.value)
+    this.setState({
+      days: e.target.value
+    });
+    localStorage.setItem('days',e.target.value)
+  }
   render() {
   const numbers = [{value: "1"},{value: 2},{value: 3},{value: 4},{value: 5},{value: 6},{value: 7}];
     return (
@@ -16,13 +28,13 @@ export class AddressForm extends React.Component {
           <ListItem>
             <ListItemText primary="Producto" />
             <Typography variant="subtitle1">
-              Nombre producto
+              {localStorage.getItem('product-name')}
             </Typography>
           </ListItem>
           <ListItem>
             <ListItemText primary="Precio" />
             <Typography variant="subtitle1">
-              $5000
+              {localStorage.getItem('price')}
             </Typography>
           </ListItem>
         </List>
@@ -33,6 +45,7 @@ export class AddressForm extends React.Component {
               id="place"
               name="place"
               label="Lugar de entrega"
+              value={localStorage.getItem('lugar')}
               fullWidth
             />
           </Grid>
@@ -43,6 +56,7 @@ export class AddressForm extends React.Component {
             select
             label="Dia(s)"
             value="1"
+            onChange = {this.handleChangeDays}
           >
             {numbers.map((option) => (
               <MenuItem key={option.value} value={option.value}>
