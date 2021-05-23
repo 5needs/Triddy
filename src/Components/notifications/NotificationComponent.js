@@ -1,46 +1,42 @@
 import React from 'react';
 import './Notifications.css';
 import { NotificationsList } from './NotificationsList';
+import { get} from '../apiaxios';
 
 export class NotificationComponent extends React.Component{
 
     constructor(props){
         super(props);
-        var notif = {
-            description: "Soy una Notificacion de mensaje",
-            type: "message",
-            dueDate: new Date() 
-        }
-        var notif2 = {
-            description: "Soy una Notificacion de devolución",
-            type: "return",
-            dueDate: new Date() 
-        }
-        var notif3 = {
-            description: "Soy una Notificacion de cancelación",
-            type: "cancel",
-            dueDate: new Date() 
-        }
-        var notif4 = {
-            description: "Soy una Notificacion de renta",
-            type: "rent",
-            dueDate: new Date() 
-        }
-        var notif5 = {
-            description: "Soy una Notificacion con tipo desconocido",
-            type: "",
-            dueDate: new Date() 
-        }
         this.state = {
-            items : [notif,notif2,notif3,notif4,notif5]
+            items : [],
+            urlusers : "http://ec2-34-203-184-51.compute-1.amazonaws.com:8080"
         }
+    }
+
+    componentDidMount() {
+        this.setNotifList();
+    }
+
+    /* istanbul ignore next */
+    async setNotifList(){
+        var notifList = [];
+        let path = "/api/users/" + localStorage.getItem("user") + "/notifications";
+        await get(this.state.urlusers,path)
+        .then(function (response) {
+            notifList = response;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+        this.setState({items: notifList});
     }
 
     render(){
         return (
             <div className="notifications-page" >
                 <header className="header">
-                    <h1> Notifications </h1>
+                    <h1> Notificaciones </h1>
                 </header>
                 <NotificationsList notificationList={this.state.items}/>
             </div>

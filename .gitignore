@@ -188,3 +188,7 @@ nb-configuration.xml
 ##############################
 
 node_modules/
+
+
+
+coverage/

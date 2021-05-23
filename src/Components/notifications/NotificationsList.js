@@ -9,27 +9,22 @@ const types = ["message", "return", "cancel","rent"];
 
 export class NotificationsList extends React.Component{
 
-    constructor(props){
-        super(props);
-
-    }
-
     getIcon(iconName){
-        if (!types.includes(iconName)){return(<FontAwesomeIcon color="#7D8491" icon={faGhost}/>)}
-
-        if (iconName==types[0]){return(<FontAwesomeIcon color="#ECA22C" icon={faCommentDots}/>)}
+        if (iconName===types[0]){return(<FontAwesomeIcon color="#ECA22C" icon={faCommentDots}/>)}
         
-        if (iconName==types[1]){return(<FontAwesomeIcon color="#53B31F" icon={faCheckCircle} />)}
+        else if (iconName===types[1]){return(<FontAwesomeIcon color="#53B31F" icon={faCheckCircle} />)}
 
-        if (iconName==types[2]){return(<FontAwesomeIcon color="#CA1111" icon={faTimesCircle} />)}
+        else if (iconName===types[2]){return(<FontAwesomeIcon color="#CA1111" icon={faTimesCircle} />)}
 
-        if (iconName==types[3]){return(<FontAwesomeIcon color="#7D8491" icon={faMoneyCheckAlt} />)}
+        else if (iconName===types[3]){return(<FontAwesomeIcon color="#7D8491" icon={faMoneyCheckAlt} />)}
+
+        else {return(<FontAwesomeIcon color="#7D8491" icon={faGhost}/>)}
     }
 
     render(){
         const notificationList = this.props.notificationList.map((notif, i) => {
             return (
-                <Notification key={i} description= {notif.description} icon= {this.getIcon(notif.type)} dueDate= {notif.dueDate}/>
+                <Notification key={i} description= {notif.content} icon= {this.getIcon(notif.type)} dueDate= {notif.date} link= {notif.link}/>
             );
         });
         return(
