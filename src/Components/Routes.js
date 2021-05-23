@@ -14,9 +14,9 @@ export default class Routes extends React.Component {
 		return(
 			<Router >
 				<Switch>
-					<Route path={"/login"} component={Login} />
-					<PrivateRoute path={"/favorites"} component={FavoritesComponent}/>
-					<PrivateRoute path={"/notifications"} component={NotificationComponent}/>
+				<Route path={"/login"} component={Login}/>
+				<Route path={"/"} component={Home}/>
+
 				</Switch>
 			</Router>
 		);

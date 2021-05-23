@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import MenuSlide from './MenuSlide';
 import MiniatureProduct from './MiniatureProduct';
 import "./home.css"
-import deportes from './images/deportes.png';
-import speakers from './images/speakers.jpg'
+import imgSlider1 from './images/enero-10-7.png';
+import imgSlider2 from './images/fondoMarketing.png';
+import imgSlider3 from './images/utiles.jpg';
+import imgSlider4 from './images/OIP.jpg';
 
 
 class Home extends Component {
@@ -25,25 +27,22 @@ class Home extends Component {
     return (
       <div className="mainContainer">
           <div className="Menuslide">
-            <MenuSlide search={true}/>
+            <MenuSlide isLogged={false}/>
           </div>
-          <div className="carousel">
-            <div className="slider">
-                <ul>
-                    <li><img src={speakers} alt="" /></li>
-                    <li><img src={deportes} alt="" /></li>
-                    <li><img src={speakers} alt="" /></li>
-                    <li><img src={deportes} alt="" /></li>
-                </ul>
-            </div>
+          <div className="slider">
+              <ul>
+                  <li><img src={imgSlider1} alt="" /></li>
+                  <li><img src={imgSlider2} alt="" /></li>
+                  <li><img src={imgSlider3} alt="" /></li>
+                  <li><img src={imgSlider4} alt="" /></li>
+              </ul>
           </div>
           <div className="ContainerExplore">
             <h1>Explore</h1>
             <div className="subContainerExplore">
-                {this.generateMini()}
+              {this.generateMini()}
             </div>
           </div>
-
       </div>
     );
   }

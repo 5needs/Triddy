@@ -1,18 +1,15 @@
 .slideMenu{
     width: 95%;
-    height: 70px;
     display: grid;
-    grid-template-columns: 20% 70% 10%;
+    grid-template-columns: 20% 60% 20% ;
+    grid-template-rows: 50px 55px;
     background-color: orange;
-    margin: 2%;
-
+    margin: 0% 0% 0% 3%;
 }
 
 .containerLogo{
-    /* background-color: antiquewhite; */
     overflow: hidden;
     margin: 1%;
-    /* margin: 2% 20% 3% 0%; */
 }
 
 .containerLogo img{
@@ -21,19 +18,67 @@
     height: 100%;
 }
 
-.search{
-    /* background-color: aliceblue; */
-    font-size: 40px;
-    color: white;
+
+.searchBar input{
+    margin-top: 1%;
+    font-size: 1em;
+    width: 85%;
 }
 
-.search input{
-    font-size: 30px;
-    width: 60%;
-    /* width: 850px; */
-    
+.iconOption{
+    margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
 }
-.buttonSlide{
-    /* background-color: aqua; */
-    padding-left: 10%;
+
+.iconOption2{
+    margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profileOptions{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.profileOptions li{
+    display: inline-block;
+    margin: 1%
+}
+
+.profileOptions a{
+    color: black;
+    transition: 0.3s;
+}
+
+.profileOptions a:hover{
+    text-decoration: dashed;
+    color: white;
+    font-size: 1.1em;
+}
+
+.sesionOptions{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 5%;
+}
+
+.sesionOptions li{
+    margin: 4% 0% 0% 3%;
+    display: inline-block;
+}
+
+.sesionOptions button{
+    font-size: 0.8em;
+    border: none;
+    background: none;
+    transition: 0.5s;
+}
+
+.sesionOptions button:hover{
+    font-size: 1em;
+    background-color: rgb(233, 232, 232);
 }

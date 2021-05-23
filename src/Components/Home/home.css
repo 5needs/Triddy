@@ -1,62 +1,62 @@
 .mainContainer{
     display: grid;
     grid-template-rows: auto;
+    row-gap: 1em;
     background-color:  rgba(160, 160, 160, 0.178);
 }
 
-.carousel{
-    height: 400px;
-}
-
 .slider{
-    width: 1000px;
-    height: 500px;
-    margin-left:auto;
-    margin-right: auto;
-    margin-bottom: -200px;
+    background-color: aqua;
+    height: 20em;
+    width: 45em;
+    margin: auto;
     overflow: hidden;
 }
 
 .slider ul{
     display: flex;
-    width:400% ;
     padding: 0;
-    animation: change_slide 20s infinite alternate;
+    width: 400%;
+    height: 100%;
+    animation: change 20s infinite;
+    animation-direction: alternate;
 }
 
 .slider li{
-    width: 100%;
     list-style: none;
+    width: 100%;
 }
 
 .slider img{
-    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
-@keyframes change_slide {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
+@keyframes change {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
 
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
 
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
 
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
 }
 
 .ContainerExplore{
     background-color: white;
-    padding: 0% 5% 0% 20%;
-
+    display: grid;
+    grid-template-rows: 10% 90%;
 }
 
 .subContainerExplore {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    gap: 3em;
+    margin: auto;
+    width: 90%;
+    gap: 7em;
 }
